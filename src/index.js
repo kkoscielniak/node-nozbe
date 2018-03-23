@@ -3,6 +3,7 @@ const qs = require('querystring');
 
 const config = require('./config');
 
+/** TODO */
 const registerApp = (email, password, redirectUri) => axios.post(
   config.REGISTER_APP,
   qs.stringify({
@@ -11,6 +12,29 @@ const registerApp = (email, password, redirectUri) => axios.post(
     redirect_uri: redirectUri,
   }),
 );
+
+/**
+ * Returns OAuth data of registered application
+ * @param {string} email Developer's e-mail
+ * @param {string} password Developer's password
+ * @return {object} OAUth data
+ */
+const getOAuthClientData = async(email, password) => {
+  try {
+    const response = await axios({
+      method: 'GET',
+      url: config.GET_OAUTH_CLIENT_DATA,
+      data: qs.stringify({
+        email,
+        password,
+      }),
+    });
+
+    return response.data;
+  } catch (err) {
+    return (err.response.data);
+  }
+};
 
 const getListOfTasks = (clientId, accessToken) => axios({
   method: 'GET',
@@ -45,13 +69,17 @@ const addTask = (clientId, accessToken, task) => {
   });
 };
 
-// addTask('a318a88a3d1856eb2402a83f38edf1a6b6622b1d', 'df387f4fa5c6b1c4e24d20996ed78dc5', {
-//   name: 'xDxDxD',
-//   // recur: 1,
-// })
-//   .then(res => console.log(res))
-//   .catch(err => console.log(err.response.data));
-
 exports.registerApp = module.exports.registerApp = registerApp;
+exports.getOAuthClientData = module.exports.getOAuthClientData = getOAuthClientData;
 exports.getListOfTasks = module.exports.getListOfTasks = getListOfTasks;
 exports.addTask = module.exports.addTask = addTask;
+
+// .then(res => console.log(res))
+// .catch(err => console.log(err.response.data));
+
+const x = async() => {
+  const data = await getOAuthClientData('krystiankoscielniak@gmail.com', 'xxx');
+  console.log(data);
+};
+
+x();
