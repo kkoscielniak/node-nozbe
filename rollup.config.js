@@ -1,9 +1,20 @@
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+
 const pkg = require('./package.json');
 
 const external = Object.keys(pkg.dependencies);
 
 export default {
   input: 'src/index.js',
+  plugins: [
+    resolve({
+      module: true,
+      jsnext: true,
+      main: true,
+    }),
+    commonjs(),
+  ],
   external,
   exports: 'named',
   globals: {},
