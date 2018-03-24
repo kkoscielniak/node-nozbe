@@ -1,5 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import uglify from 'rollup-plugin-uglify';
 
 const pkg = require('./package.json');
 
@@ -14,6 +15,7 @@ export default {
       main: true,
     }),
     commonjs(),
+    uglify(),
   ],
   external,
   exports: 'named',
