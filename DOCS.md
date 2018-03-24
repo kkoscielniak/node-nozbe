@@ -1,6 +1,9 @@
 ## Functions
 
 <dl>
+<dt><a href="#addComment">addComment(clientId, accessToken, comment, taskId, type)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Adds comment to particular task</p>
+</dd>
 <dt><a href="#registerApp">registerApp(email, password, redirectUri)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Registers application to be used with Nozbe</p>
 </dd>
@@ -11,6 +14,22 @@
 <dd><p>Adds new task to the project</p>
 </dd>
 </dl>
+
+<a name="addComment"></a>
+
+## addComment(clientId, accessToken, comment, taskId, type) ⇒ <code>Promise</code>
+Adds comment to particular task
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - Modified task data **with comments**  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| clientId | <code>string</code> | Application ID |
+| accessToken | <code>string</code> | Users access token |
+| comment | <code>object</code> | Comments body |
+| taskId | <code>string</code> | Comments ID |
+| type | <code>string</code> | Type of comment, where<br> `markdown`: Comment in Markdown format<br> `checklist`: Comment in following format:<br> (+) marked checklist item<br> (-) unmarked checklist item |
 
 <a name="registerApp"></a>
 

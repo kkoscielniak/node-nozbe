@@ -5,4 +5,5 @@ exports = module.exports = {
   GET_OAUTH_CLIENT_DATA: `${API_URL}/oauth/secret/data`,
   LIST: `${API_URL}/list`,
   TASK: `${API_URL}/task`,
+  COMMENT: `${API_URL}/task/comment`,
 };

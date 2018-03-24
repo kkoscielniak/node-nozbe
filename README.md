@@ -14,13 +14,13 @@ const nozbe = require('node-nozbe');
 
 nozbe.addTask(clientId, accessToken, {
   name: 'Create rich docs for node-nozbe',
-})
+});
 ```
 Where 
 * `clientId` is obtained during registration of the application with `registerApp()` function
 * `accessToken` is the end-user's api key provided by `getOAuthAccessToken()` or in Nozbe settings
 
-All the functions return a **Promise**.
+All the functions return a **Promise**. 
 
 More detailed documentation of `node-nozbe` with all the functions described is available [here](/DOCS.md). 
 

@@ -5,6 +5,7 @@ const config = require('./config');
 
 const oauth = require('./oauth');
 const task = require('./task');
+const comment = require('./comment');
 
 const getListOfTasks = (clientId, accessToken) => axios({
   method: 'GET',
@@ -22,3 +23,4 @@ exports.registerApp = module.exports.registerApp = oauth.registerApp;
 exports.getOAuthClientData = module.exports.getOAuthClientData = oauth.getOAuthClientData;
 exports.getListOfTasks = module.exports.getListOfTasks = getListOfTasks;
 exports.addTask = module.exports.addTask = task.addTask;
+exports.addComment = module.exports.addComment = comment.addComment;
