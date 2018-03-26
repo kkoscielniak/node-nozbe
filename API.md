@@ -1,9 +1,10 @@
+# node-nozbe API reference
+
+This file contains description of all the functions available along with the parameters they take.
+
 ## Functions
 
 <dl>
-<dt><a href="#addComment">addComment(clientId, accessToken, comment, taskId, type)</a> ⇒ <code>Promise</code></dt>
-<dd><p>Adds comment to particular task</p>
-</dd>
 <dt><a href="#registerApp">registerApp(email, password, redirectUri)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Registers application to be used with Nozbe</p>
 </dd>
@@ -13,23 +14,10 @@
 <dt><a href="#addTask">addTask(clientId, accessToken, task)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds new task to the project</p>
 </dd>
+<dt><a href="#addComment">addComment(clientId, accessToken, comment, taskId, type)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Adds comment to particular task</p>
+</dd>
 </dl>
-
-<a name="addComment"></a>
-
-## addComment(clientId, accessToken, comment, taskId, type) ⇒ <code>Promise</code>
-Adds comment to particular task
-
-**Kind**: global function  
-**Returns**: <code>Promise</code> - Modified task data **with comments**  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| clientId | <code>string</code> | Application ID |
-| accessToken | <code>string</code> | Users access token |
-| comment | <code>object</code> | Comments body |
-| taskId | <code>string</code> | Comments ID |
-| type | <code>string</code> | Type of comment, where<br> `markdown`: Comment in Markdown format<br> `checklist`: Comment in following format:<br> (+) marked checklist item<br> (-) unmarked checklist item |
 
 <a name="registerApp"></a>
 
@@ -80,4 +68,20 @@ Adds new task to the project
 | task.user | <code>string</code> | User ID the task should be assigned for |
 | task.time | <code>number</code> | Time needed to accomplish the task (in minutes) |
 | task.recur | <code>number</code> | Recurrency of the task where<br> `0`: do not repeat (default)<br> `1`: every day<br> `2`: every week day<br> `3`: every week<br> `4`: every 2 weeks<br> `5`: every month<br> `6`: every half of a year<br> `7`: every year<br> `8`: every 3 weeks<br> `9`: every 2 months<br> `10`: every 3 months<br> `11`: every 2 years<br> `12`: every 2 days<br> `13`: every 4 weeks<br> |
+
+<a name="addComment"></a>
+
+## addComment(clientId, accessToken, comment, taskId, type) ⇒ <code>Promise</code>
+Adds comment to particular task
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - Modified task data **with comments**  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| clientId | <code>string</code> | Application ID |
+| accessToken | <code>string</code> | Users access token |
+| comment | <code>object</code> | Comments body |
+| taskId | <code>string</code> | Comments ID |
+| type | <code>string</code> | Type of comment, where<br> `markdown`: Comment in Markdown format<br> `checklist`: Comment in following format:<br> (+) marked checklist item<br> (-) unmarked checklist item |
 

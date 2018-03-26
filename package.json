@@ -6,7 +6,7 @@
   "module": "lib/node-nozbe.mjs",
   "jsnext:main": "lib/node-nozbe.mjs",
   "scripts": {
-    "generate-docs": "npx jsdoc-to-markdown src/*.js > DOCS.md",
+    "generate-docs": "npx jsdoc-to-markdown -f src/oauth.js src/task.js src/comment.js --template utils/API.hbs > API.md",
     "prepublish": "NODE_PATH=src npm run build",
     "prebuild": "rimraf ./lib",
     "build": "NODE_PATH=src rollup -c",
