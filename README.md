@@ -22,7 +22,7 @@ Where
 
 All the functions return a **Promise**. 
 
-More detailed documentation of `node-nozbe` with all the functions described is available [here](/DOCS.md). 
+More detailed documentation of `node-nozbe` with all the functions described is available [here](/API.md). 
 
 ## Why? 
 
