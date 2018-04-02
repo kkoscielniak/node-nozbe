@@ -21,3 +21,21 @@ exports.registerApp = async(email, password, redirectUri) => new Promise((resolv
     resolve(mockedRegisterData);
   });
 });
+
+exports.getOAuthClientData = async(email, password) => new Promise((resolve, reject) => {
+  process.nextTick(() => {
+    if (!email || !password) {
+      reject({
+        error: 'Bad Request',
+      });
+    }
+
+    if (email !== 'email@example.com' || password !== 'password') {
+      reject({
+        error: 'Bad login or password',
+      });
+    }
+
+    resolve(mockedRegisterData);
+  });
+});

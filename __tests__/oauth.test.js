@@ -2,7 +2,7 @@ const oauth = require('../src/oauth');
 
 jest.mock('../src/oauth');
 
-describe('#registerApp() using Promises', () => {
+describe('#registerApp()', () => {
   it('should return registered app data', () => {
     const mockedRegisterData = {
       client_id: 'mocked_client_id',
@@ -12,39 +12,76 @@ describe('#registerApp() using Promises', () => {
 
     return oauth.registerApp('email@example.com', 'password', 'http://example.com')
       .then(data => {
-        expect.assertions(2);
         expect(data).toBeDefined();
         expect(data).toMatchObject(mockedRegisterData);
       });
   });
 
   it('should reject if the redirect_uri is not given', () => {
-    const errorMessage = {
+    const emptyUriErrorMessage = {
       error: 'Redirect uri is empty',
     };
 
-    expect.assertions(0);
     expect(oauth.registerApp('email@example.com', 'password'))
       .rejects
-      .toEqual(errorMessage);
+      .toEqual(emptyUriErrorMessage);
   });
 
   it('should reject if the email or password are not correct', () => {
-    const errorMessage = {
+    const badAuthErrorMessage = {
       error: 'Bad login or password',
     };
 
-    expect.assertions(0);
     expect(oauth.registerApp('email@example.com', 'wrong_password'))
       .rejects
-      .toEqual(errorMessage);
+      .toEqual(badAuthErrorMessage);
 
     expect(oauth.registerApp('wrong_email@example.com', 'password'))
       .rejects
-      .toEqual(errorMessage);
+      .toEqual(badAuthErrorMessage);
 
     expect(oauth.registerApp('wrong_email@example.com', 'wrong_password'))
       .rejects
-      .toEqual(errorMessage);
+      .toEqual(badAuthErrorMessage);
+  });
+});
+
+describe('#getOAuthClientData', () => {
+  it('should return registered app data', () => {
+    const mockedRegisterData = {
+      client_id: 'mocked_client_id',
+      client_secret: 'mocked_client_secret',
+      redirect_uri: 'http://example.com',
+    };
+
+    return oauth.getOAuthClientData('email@example.com', 'password')
+      .then(data => {
+        expect(data).toBeDefined();
+        expect(data).toMatchObject(mockedRegisterData);
+      });
+  });
+
+  it('should reject if the email or password are not given', () => {
+    const badRequestErrorMessage = {
+      error: 'Bad Request',
+    };
+
+    expect(oauth.getOAuthClientData('email@example.com', ''))
+      .rejects
+      .toEqual(badRequestErrorMessage);
+
+    expect(oauth.getOAuthClientData('', 'password'))
+      .rejects
+      .toEqual(badRequestErrorMessage);
+  });
+
+  it('should reject if the email or password are wrong', () => {
+    const badAuthErrorMessage = {
+      error: 'Bad login or password',
+    };
+
+    expect(oauth.getOAuthClientData('email@example.com', 'wrong_password'))
+      .rejects
+      .toEqual(badAuthErrorMessage);
   });
 });
