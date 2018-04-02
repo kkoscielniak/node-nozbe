@@ -1,8 +1,10 @@
+const puppeteer = require('puppeteer');
+
 const oauth = require('../src/oauth');
 
 jest.mock('../src/oauth');
 
-describe('#registerApp()', () => {
+describe('#registerApp', () => {
   it('should return registered app data', () => {
     const mockedRegisterData = {
       client_id: 'mocked_client_id',
@@ -84,4 +86,41 @@ describe('#getOAuthClientData', () => {
       .rejects
       .toEqual(badAuthErrorMessage);
   });
+});
+
+describe('#getOAuthAccessToken', () => {
+  let browser;
+  let page;
+
+  beforeAll(async() => {
+    browser = await puppeteer.launch({
+      headless: true,
+    });
+  });
+
+  beforeEach(async() => {
+    page = await browser.newPage();
+  });
+
+  it('should return HTML form', () => oauth.getOAuthAccessToken('test')
+    .then(async data => {
+      await page.setContent(data);
+      await page.waitForSelector('form');
+
+      const loginInput = await page.$eval('input[type="text"]', e => e.getAttribute('placeholder'));
+      expect(loginInput).toBe('login');
+
+      const passwordInput = await page.$eval('input[type="password"]', e => e.getAttribute('placeholder'));
+      expect(passwordInput).toBe('password');
+    }));
+
+  it('should not return HTML form if clientId is not given', () => {
+    const clientIdMissingErrorMessage = {
+      error: 'client_id is empty',
+    };
+
+    expect(oauth.getOAuthAccessToken()).rejects.toEqual(clientIdMissingErrorMessage);
+  });
+
+  afterAll(async() => await browser.close());
 });

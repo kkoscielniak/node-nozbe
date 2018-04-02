@@ -4,6 +4,7 @@ const comment = require('./comment');
 
 exports.registerApp = module.exports.registerApp = oauth.registerApp;
 exports.getOAuthClientData = module.exports.getOAuthClientData = oauth.getOAuthClientData;
+exports.getOAuthAccessToken = module.exports.getOAuthAccessToken = oauth.getOAuthAccessToken;
 
 exports.getListOfTasks = module.exports.getListOfTasks = task.getListOfTasks;
 exports.addTask = module.exports.addTask = task.addTask;

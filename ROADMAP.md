@@ -7,7 +7,7 @@ At this moment the package is developed concurrently with another Nozbe-related 
 ## Authorization
 - [x] Register app
 - [x] Retrieve the registration data
-- [ ] Obtain the OAuth access token
+- [x] *Obtain the OAuth access token* (partially, responds with HTML to render)
 - [ ] Refresh the OAuth access token
 ## Tasks
 - [x] Retrieve a list of tasks

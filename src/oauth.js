@@ -50,3 +50,24 @@ exports.getOAuthClientData = async(email, password) => {
     return (err.response.data);
   }
 };
+
+/**
+ * Returns HTML login form for authentication
+ * @param {string} clientId Application ID
+ * @return {HTML} Login form
+ */
+exports.getOAuthAccessToken = async clientId => {
+  try {
+    const response = await axios({
+      method: 'GET',
+      url: config.LOGIN,
+      data: qs.stringify({
+        client_id: clientId,
+      }),
+    });
+
+    return response.data;
+  } catch (err) {
+    return err.response.data;
+  }
+};
