@@ -4,6 +4,24 @@ const qs = require('querystring');
 const config = require('./config');
 
 /**
+ * Retrieves a full list of tasks
+ * @param {string} clientId
+ * @param {string} accessToken
+ * @return {Promise} Tasks data
+ */
+exports.getListOfTasks = (clientId, accessToken) => axios({
+  method: 'GET',
+  url: config.LIST,
+  headers: {
+    Authorization: accessToken,
+  },
+  data: qs.stringify({
+    client_id: clientId,
+    type: 'task',
+  }),
+});
+
+/**
  * Adds new task to the project
  * @param {string} clientId Application ID
  * @param {string} accessToken Users access token

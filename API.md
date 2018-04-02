@@ -11,6 +11,9 @@ This file contains description of all the functions available along with the par
 <dt><a href="#getOAuthClientData">getOAuthClientData(email, password)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Fetches OAuth data of registered application</p>
 </dd>
+<dt><a href="#getListOfTasks">getListOfTasks(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Retrieves a full list of tasks</p>
+</dd>
 <dt><a href="#addTask">addTask(clientId, accessToken, task)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds new task to the project</p>
 </dd>
@@ -45,6 +48,19 @@ Fetches OAuth data of registered application
 | --- | --- | --- |
 | email | <code>string</code> | Developer's e-mail |
 | password | <code>string</code> | Developer's password |
+
+<a name="getListOfTasks"></a>
+
+## getListOfTasks(clientId, accessToken) ⇒ <code>Promise</code>
+Retrieves a full list of tasks
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - Tasks data  
+
+| Param | Type |
+| --- | --- |
+| clientId | <code>string</code> | 
+| accessToken | <code>string</code> | 
 
 <a name="addTask"></a>
 
