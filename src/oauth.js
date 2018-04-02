@@ -52,22 +52,14 @@ exports.getOAuthClientData = async(email, password) => {
 };
 
 /**
- * Returns HTML login form for authentication
+ * Returns URL to login form
  * @param {string} clientId Application ID
- * @return {HTML} Login form
+ * @return {string} Login form URL
  */
-exports.getOAuthAccessToken = async clientId => {
-  try {
-    const response = await axios({
-      method: 'GET',
-      url: config.LOGIN,
-      data: qs.stringify({
-        client_id: clientId,
-      }),
-    });
-
-    return response.data;
-  } catch (err) {
-    return err.response.data;
+exports.getOAuthLoginURL = clientId => {
+  if (!clientId) {
+    throw new Error('No clientId provided');
   }
+
+  return `${config.LOGIN}/?client_id=${clientId}`;
 };

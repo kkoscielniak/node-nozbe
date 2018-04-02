@@ -11,8 +11,8 @@ This file contains description of all the functions available along with the par
 <dt><a href="#getOAuthClientData">getOAuthClientData(email, password)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Fetches OAuth data of registered application</p>
 </dd>
-<dt><a href="#getOAuthAccessToken">getOAuthAccessToken(clientId)</a> ⇒ <code>HTML</code></dt>
-<dd><p>Returns HTML login form for authentication</p>
+<dt><a href="#getOAuthLoginURL">getOAuthLoginURL(clientId)</a> ⇒ <code>string</code></dt>
+<dd><p>Returns URL to login form</p>
 </dd>
 <dt><a href="#getListOfTasks">getListOfTasks(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Retrieves a full list of tasks</p>
@@ -52,13 +52,13 @@ Fetches OAuth data of registered application
 | email | <code>string</code> | Developer's e-mail |
 | password | <code>string</code> | Developer's password |
 
-<a name="getOAuthAccessToken"></a>
+<a name="getOAuthLoginURL"></a>
 
-## getOAuthAccessToken(clientId) ⇒ <code>HTML</code>
-Returns HTML login form for authentication
+## getOAuthLoginURL(clientId) ⇒ <code>string</code>
+Returns URL to login form
 
 **Kind**: global function  
-**Returns**: <code>HTML</code> - Login form  
+**Returns**: <code>string</code> - Login form URL  
 
 | Param | Type | Description |
 | --- | --- | --- |

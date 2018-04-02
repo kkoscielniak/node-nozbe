@@ -6,6 +6,7 @@
   "rules": {
     "no-invalid-this": 0,
     "camelcase": 0,
+    "no-throw-literal": 0
   },
   "env": {
     "jest": true
