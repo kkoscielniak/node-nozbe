@@ -24,6 +24,9 @@ All the functions return a **Promise**.
 
 More detailed documentation of `node-nozbe` with all the functions described is available [here](/API.md). 
 
+## Roadmap
+The up-to-date roadmap is available [here](/ROADMAP.md).
+
 ## Why? 
 
-The package's sole purpose was to serve as a playground for learning the package development process itself. It was never meant to cover all the aspects of the API as I do not need them. However, if you are willing to expand its possibilities, feel free to open a Pull Request or an Issue.
+The package's sole purpose was to serve as a playground for learning the package development process itself. It was never meant to cover all the aspects of the API as I do not need them.. However, if you are willing to expand its possibilities, feel free to open a Pull Request or an Issue.
