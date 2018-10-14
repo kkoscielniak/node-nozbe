@@ -6,6 +6,7 @@ exports.registerApp = module.exports.registerApp = oauth.registerApp;
 exports.getOAuthClientData = module.exports.getOAuthClientData = oauth.getOAuthClientData;
 exports.getOAuthAccessToken = module.exports.getOAuthAccessToken = oauth.getOAuthAccessToken;
 exports.getOAuthLoginURL = module.exports.getOAuthLoginURL = oauth.getOAuthLoginURL;
+exports.updateOAuthRedirectUri = module.exports.updateOAuthRedirectUri = oauth.updateOAuthRedirectUri;
 
 exports.getListOfTasks = module.exports.getListOfTasks = task.getListOfTasks;
 exports.addTask = module.exports.addTask = task.addTask;

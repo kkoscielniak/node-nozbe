@@ -14,6 +14,9 @@ This file contains description of all the functions available along with the par
 <dt><a href="#getOAuthLoginURL">getOAuthLoginURL(clientId)</a> ⇒ <code>string</code></dt>
 <dd><p>Returns URL to login form</p>
 </dd>
+<dt><a href="#updateOAuthRedirectUri">updateOAuthRedirectUri(clientId, clientSecret, redirectUri)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Updates OAuth redirect URI</p>
+</dd>
 <dt><a href="#getListOfTasks">getListOfTasks(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Retrieves a full list of tasks</p>
 </dd>
@@ -63,6 +66,20 @@ Returns URL to login form
 | Param | Type | Description |
 | --- | --- | --- |
 | clientId | <code>string</code> | Application ID |
+
+<a name="updateOAuthRedirectUri"></a>
+
+## updateOAuthRedirectUri(clientId, clientSecret, redirectUri) ⇒ <code>Promise</code>
+Updates OAuth redirect URI
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - OAUth data  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| clientId | <code>string</code> | Existing Application ID |
+| clientSecret | <code>string</code> | Existing Client Secret |
+| redirectUri | <code>string</code> | URI to be redirected to after successful login |
 
 <a name="getListOfTasks"></a>
 

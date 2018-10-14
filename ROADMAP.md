@@ -2,13 +2,15 @@
 
 This file contains the list of what functionalities of Nozbe are covered by the package and what features still wait for being developed.
 
-At this moment the package is developed concurrently with another Nozbe-related project. Particular functionalities will be added when needed.
+At this moment the package is developed concurrently with another Nozbe-related project. Particular functionalities will be added when necessary.
 
 ## Authorization
 - [x] Register app
 - [x] Retrieve the registration data
 - [x] *Obtain the OAuth access token* (partially, responds with login URL)
+- [x] Update application redirect URL
 - [ ] Refresh the OAuth access token
+
 ## Tasks
 - [x] Retrieve a list of tasks
 - [ ] Get a single task

@@ -38,7 +38,7 @@ exports.getOAuthClientData = async(email, password) => {
   try {
     const response = await axios({
       method: 'GET',
-      url: config.GET_OAUTH_CLIENT_DATA,
+      url: config.OAUTH_CLIENT_DATA,
       data: qs.stringify({
         email,
         password,
@@ -62,4 +62,27 @@ exports.getOAuthLoginURL = clientId => {
   }
 
   return `${config.LOGIN}/?client_id=${clientId}`;
+};
+
+/**
+ * Updates OAuth redirect URI
+ * @param {string} clientId Existing Application ID
+ * @param {string} clientSecret Existing Client Secret
+ * @param {string} redirectUri URI to be redirected to after successful login
+ * @return {Promise} OAUth data
+ */
+exports.updateOAuthRedirectUri = async(clientId, clientSecret, redirectUri) => {
+  try {
+    const response = await axios({
+      method: 'PUT',
+      url: `${config.OAUTH_CLIENT_DATA}?client_id=${clientId}&secret_token=${clientSecret}`,
+      data: qs.stringify({
+        redirect_uri: redirectUri,
+      }),
+    });
+
+    return response.data;
+  } catch (err) {
+    return (err.response.data);
+  }
 };
