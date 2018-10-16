@@ -23,7 +23,7 @@ This file contains description of all the functions available along with the par
 <dt><a href="#addTask">addTask(clientId, accessToken, task)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds new task to the project</p>
 </dd>
-<dt><a href="#addComment">addComment(clientId, accessToken, comment, taskId, type)</a> ⇒ <code>Promise</code></dt>
+<dt><a href="#addComment">addComment(clientId, accessToken, comment)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds comment to particular task</p>
 </dd>
 </dl>
@@ -119,7 +119,7 @@ Adds new task to the project
 
 <a name="addComment"></a>
 
-## addComment(clientId, accessToken, comment, taskId, type) ⇒ <code>Promise</code>
+## addComment(clientId, accessToken, comment) ⇒ <code>Promise</code>
 Adds comment to particular task
 
 **Kind**: global function  
@@ -129,7 +129,8 @@ Adds comment to particular task
 | --- | --- | --- |
 | clientId | <code>string</code> | Application ID |
 | accessToken | <code>string</code> | Users access token |
-| comment | <code>object</code> | Comments body |
-| taskId | <code>string</code> | Comments ID |
-| type | <code>string</code> | Type of comment, where<br> `markdown`: Comment in Markdown format<br> `checklist`: Comment in following format:<br> (+) marked checklist item<br> (-) unmarked checklist item |
+| comment | <code>object</code> | Comment object **(required)** |
+| comment.taskId | <code>string</code> | Comments ID **(required)** |
+| comment.body | <code>string</code> | Comments content **(required)** |
+| comment.type | <code>string</code> | Type of comment, where<br> `markdown`: Comment in Markdown format<br> `checklist`: Comment in following format:<br> (+) marked checklist item<br> (-) unmarked checklist item |
 
