@@ -1,12 +1,5 @@
 const users = [
-  {
-    caption: 'User1',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
-    pinned: true,
-  },
+  // TODO: Add users
 ];
 
 const siteConfig = {
@@ -27,8 +20,7 @@ const siteConfig = {
     { doc: 'api', label: 'API' },
   ],
 
-  // If you have users set above, you add it here:
-  users,
+  // users,
 
   /* Colors for website */
   colors: {
