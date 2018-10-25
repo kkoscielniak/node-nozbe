@@ -1,14 +1,19 @@
-# node-nozbe
+# node-nozbe 📦
 NodeJS implementation of Nozbe REST API.
 
 It partially implements functionality of the Nozbe REST API available [here](https://webapp.nozbe.com/pl/api). Basically this is a proof of concept, cool for creating small utilities for Nozbe, without providing the fully-featured set of Nozbe functionalities. If you need something richer, please contact Nozbe support and discuss the idea with them.
 
-## Installation 
+## 📒 Docs
+
+For the latest documentation and release information click [here](https://kkoscielniak.github.io/node-nozbe/).
+
+## ⬇️ Installation
 ```
 npm i node-nozbe
 ```
 
-## Usage
+## 🔧 Usage
+A trivial example of usage:
 ```javascript
 const nozbe = require('node-nozbe');
 
@@ -20,13 +25,12 @@ Where
 * `clientId` is obtained during registration of the application with `registerApp()` function
 * `accessToken` is the end-user's api key provided by `getOAuthAccessToken()` or in Nozbe settings
 
-All the functions return a **Promise**. 
+For more detailed description of `node-nozbe` possibilities visit [API reference](https://kkoscielniak.github.io/node-nozbe/docs/api). 
 
-More detailed documentation of `node-nozbe` with all the functions described is available [here](/docs/API.md). 
+## 🗺 Roadmap
+The up-to-date roadmap is available [here](https://kkoscielniak.github.io/node-nozbe/docs/roadmap).
 
-## Roadmap
-The up-to-date roadmap is available [here](/docs/ROADMAP.md).
+## 🍍 Author
+Main author and maintainer of `node-nozbe` is [Krystian Kościelniak](https://github.com/kkoscielniak).
 
-## Why? 
-
-The package's sole purpose was to serve as a playground for learning the package development process itself. It was never meant to cover all the aspects of the API as I do not need them.. However, if you are willing to expand its possibilities, feel free to open a Pull Request or an Issue.
+`node-nozbe` is available under the MIT license. See the LICENSE file for more info.
