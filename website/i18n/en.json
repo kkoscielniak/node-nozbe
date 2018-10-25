@@ -5,33 +5,30 @@
     "previous": "Previous",
     "tagline": "A website for testing",
     "docs": {
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "api": {
+        "title": "API reference",
+        "sidebar_label": "API reference"
       },
-      "doc2": {
-        "title": "document number 2"
+      "installation": {
+        "title": "Installation and usage",
+        "sidebar_label": "Installation"
       },
-      "doc3": {
-        "title": "This is document number 3"
+      "overview": {
+        "title": "node-nozbe",
+        "sidebar_label": "Overview"
       },
-      "doc4": {
-        "title": "Other Document"
-      },
-      "doc5": {
-        "title": "Fifth Document"
+      "roadmap": {
+        "title": "Roadmap",
+        "sidebar_label": "Roadmap"
       }
     },
     "links": {
       "Docs": "Docs",
-      "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "API": "API"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Getting started": "Getting started",
+      "API": "API"
     }
   },
   "pages-strings": {

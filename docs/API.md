@@ -1,4 +1,8 @@
-# node-nozbe API reference
+---
+id: api
+title: API reference
+sidebar_label: API reference
+---
 
 This file contains description of all the functions available along with the parameters they take.
 

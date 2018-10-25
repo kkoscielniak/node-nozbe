@@ -25,7 +25,7 @@ All the functions return a **Promise**.
 More detailed documentation of `node-nozbe` with all the functions described is available [here](/API.md). 
 
 ## Roadmap
-The up-to-date roadmap is available [here](/ROADMAP.md).
+The up-to-date roadmap is available [here](/docs/ROADMAP.md).
 
 ## Why? 
 
