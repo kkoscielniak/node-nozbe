@@ -4,12 +4,9 @@ const users = [
 
 const siteConfig = {
   title: 'node-nozbe',
-  tagline: 'A website for testing',
-  url: 'https://your-docusaurus-test-site.com', // TODO:
-  baseUrl: '/',
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  tagline: 'NodeJS implementation of Nozbe API',
+  url: 'https://kkoscielniak.github.io',
+  baseUrl: '/node-nozbe/',
 
   projectName: 'node-nozbe',
   organizationName: 'kkoscielniak',

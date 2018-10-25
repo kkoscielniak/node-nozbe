@@ -3,3 +3,4 @@ npm-debug.log
 .vscode
 .idea/
 coverage/
+website/build/

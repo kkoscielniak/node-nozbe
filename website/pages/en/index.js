@@ -59,9 +59,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+            <Button className="cta" href={docUrl('overview', language)}>Read the docs</Button>
+            <Button href="https://github.com/kkoscielniak/node-nozbe">Fork me</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -78,15 +77,6 @@ const Block = props => (
   </Container>
 );
 
-const FeatureCallout = () => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
 class Index extends React.Component {
   render() {
     const language = this.props.language || '';
@@ -94,9 +84,6 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash language={language} />
-        <div className="mainContainer">
-          <FeatureCallout />
-        </div>
       </div>
     );
   }

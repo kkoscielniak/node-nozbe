@@ -1,4 +1,8 @@
 /* your custom css */
+.cta {
+  background-color: #2E8555;
+  color: white;
+}
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
