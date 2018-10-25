@@ -1,6 +1,9 @@
-# Roadmap 
-
-This file contains the list of what functionalities of Nozbe are covered by the package and what features still wait for being developed.
+---
+id: roadmap
+title: Roadmap
+sidebar_label: Roadmap
+---
+This document describes what Nozbe functionalities Nozbe are covered by the `node-nozbe` package and what features still wait for being developed.
 
 At this moment the package is developed concurrently with another Nozbe-related project. Particular functionalities will be added when necessary.
 
@@ -15,7 +18,7 @@ At this moment the package is developed concurrently with another Nozbe-related 
 - [x] Retrieve a list of tasks
 - [ ] Get a single task
 - [x] Add a task
-- [ ] Edit a task 
+- [ ] Edit a task
 - [ ] Remove a task
 
 ## Comments
