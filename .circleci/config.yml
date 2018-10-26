@@ -30,8 +30,14 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
       - run:
-          name: Test
+          name: Run tests
           command: npm t
+      - run:
+          name: Generate coveralls config
+          command: "echo repo_token: $REPO_TOKEN > ./.coveralls.yml"
+      - run:
+          name: Upload coverage to coveralls
+          command: cat ./coverage/lcov.info | coveralls
       - save_cache:
           paths:
             - node_modules
@@ -47,12 +53,13 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
       - run:
-          name: Compile
+          name: Compile final build
           command: npm run build
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
 
 workflows:
   version: 2

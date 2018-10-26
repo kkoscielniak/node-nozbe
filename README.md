@@ -1,4 +1,6 @@
 # node-nozbe 📦
+[![Coverage Status](https://coveralls.io/repos/github/kkoscielniak/node-nozbe/badge.svg?branch=master)](https://coveralls.io/github/kkoscielniak/node-nozbe?branch=master)
+
 NodeJS implementation of Nozbe REST API.
 
 It partially implements functionality of the Nozbe REST API available [here](https://webapp.nozbe.com/pl/api). Basically this is a proof of concept, cool for creating small utilities for Nozbe, without providing the fully-featured set of Nozbe functionalities. If you need something richer, please contact Nozbe support and discuss the idea with them.
