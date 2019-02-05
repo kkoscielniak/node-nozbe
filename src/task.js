@@ -9,17 +9,25 @@ const config = require('./config');
  * @param {string} accessToken
  * @return {Promise} Tasks data
  */
-exports.getListOfTasks = (clientId, accessToken) => axios({
-  method: 'GET',
-  url: config.LIST,
-  headers: {
-    Authorization: accessToken,
-  },
-  data: qs.stringify({
-    client_id: clientId,
-    type: 'task',
-  }),
-});
+exports.getListOfTasks = async(clientId, accessToken) => {
+  try {
+    const response = await axios({
+      method: 'GET',
+      url: config.LIST,
+      headers: {
+        Authorization: accessToken,
+      },
+      data: qs.stringify({
+        client_id: clientId,
+        type: 'task',
+      }),
+    });
+
+    return response.data;
+  } catch (err) {
+    return err.response.data;
+  }
+};
 
 /**
  * Adds new task to the project
