@@ -11,16 +11,16 @@ const config = require('./config');
  */
 exports.getListOfTasks = async(clientId, accessToken) => {
   try {
-    const response = await axios({
-      method: 'GET',
-      url: config.LIST,
+    const params = {
+      client_id: clientId,
+      type: 'task',
+    };
+
+    const response = await axios.get(config.LIST, {
+      params,
       headers: {
         Authorization: accessToken,
       },
-      data: qs.stringify({
-        client_id: clientId,
-        type: 'task',
-      }),
     });
 
     return response.data;
