@@ -1,6 +1,6 @@
 {
   "name": "node-nozbe",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Nozbe REST API wrapper for Node.js",
   "homepage": "https://github.com/kkoscielniak/node-nozbe",
   "main": "lib/node-nozbe.js",
