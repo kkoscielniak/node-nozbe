@@ -33,6 +33,7 @@ At this moment the package is developed concurrently with another Nozbe-related 
 - [ ] Remove a context
 
 ## Projects 
+- [x] Get projects
 - [ ] Add a project
 - [ ] Edit a project
 - [ ] Remove a project

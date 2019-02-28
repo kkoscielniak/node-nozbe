@@ -1,9 +1,3 @@
----
-id: api
-title: API reference
-sidebar_label: API reference
----
-
 This file contains description of all the functions available along with the parameters they take.
 
 ## Functions
@@ -29,6 +23,9 @@ This file contains description of all the functions available along with the par
 </dd>
 <dt><a href="#addComment">addComment(clientId, accessToken, comment)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds comment to particular task</p>
+</dd>
+<dt><a href="#getProjects">getProjects(clientId, accessToken, options)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Retrieves a complete list of projects</p>
 </dd>
 </dl>
 
@@ -137,4 +134,19 @@ Adds comment to particular task
 | comment.taskId | <code>string</code> | Comments ID **(required)** |
 | comment.body | <code>string</code> | Comments content **(required)** |
 | comment.type | <code>string</code> | Type of comment, where<br> `markdown`: Comment in Markdown format<br> `checklist`: Comment in following format:<br> (+) marked checklist item<br> (-) unmarked checklist item |
+
+<a name="getProjects"></a>
+
+## getProjects(clientId, accessToken, options) ⇒ <code>Promise</code>
+Retrieves a complete list of projects
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - Projects  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| clientId | <code>string</code> | Application ID |
+| accessToken | <code>string</code> | User access token |
+| options | <code>object</code> | Request options |
+| options.sort | <code>boolean</code> | Sort projects alphabetically. Inbox first. |
 
