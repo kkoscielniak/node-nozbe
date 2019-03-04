@@ -25,7 +25,7 @@ nozbe.addTask(clientId, accessToken, {
 ```
 Where 
 * `clientId` is obtained during registration of the application with `registerApp()` function
-* `accessToken` is the end-user's api key provided by `getOAuthAccessToken()` or in Nozbe settings
+* `accessToken` is the end-user's access token obtained after successful login
 
 For more detailed description of `node-nozbe` possibilities visit [API reference](https://kkoscielniak.github.io/node-nozbe/docs/api). 
 
