@@ -4,7 +4,7 @@ const mockedRegisterData = {
   redirect_uri: 'http://example.com',
 };
 
-exports.registerApp = async(email, password, redirectUri) => new Promise((resolve, reject) => {
+exports.registerApp = async (email, password, redirectUri) => new Promise((resolve, reject) => {
   process.nextTick(() => {
     if (!redirectUri) {
       reject({
@@ -22,7 +22,7 @@ exports.registerApp = async(email, password, redirectUri) => new Promise((resolv
   });
 });
 
-exports.getOAuthClientData = async(email, password) => new Promise((resolve, reject) => {
+exports.getOAuthClientData = async (email, password) => new Promise((resolve, reject) => {
   process.nextTick(() => {
     if (!email || !password) {
       reject({

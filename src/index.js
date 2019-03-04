@@ -5,7 +5,6 @@ const project = require('./project');
 
 exports.registerApp = module.exports.registerApp = oauth.registerApp;
 exports.getOAuthClientData = module.exports.getOAuthClientData = oauth.getOAuthClientData;
-exports.getOAuthAccessToken = module.exports.getOAuthAccessToken = oauth.getOAuthAccessToken;
 exports.getOAuthLoginURL = module.exports.getOAuthLoginURL = oauth.getOAuthLoginURL;
 exports.updateOAuthRedirectUri = module.exports.updateOAuthRedirectUri = oauth.updateOAuthRedirectUri;
 

@@ -10,7 +10,7 @@ const config = require('./config');
  * @param {string} redirectUri The application's register URI
  * @return {Promise} OAuth data for registered application
  */
-exports.registerApp = async(email, password, redirectUri) => {
+exports.registerApp = async (email, password, redirectUri) => {
   try {
     const response = await axios({
       method: 'POST',
@@ -32,17 +32,17 @@ exports.registerApp = async(email, password, redirectUri) => {
  * Fetches OAuth data of registered application
  * @param {string} email Developer's e-mail
  * @param {string} password Developer's password
- * @return {Promise} OAUth data
+ * @return {Promise} OAuth data
  */
-exports.getOAuthClientData = async(email, password) => {
+exports.getOAuthClientData = async (email, password) => {
   try {
-    const response = await axios({
-      method: 'GET',
-      url: config.OAUTH_CLIENT_DATA,
-      data: qs.stringify({
-        email,
-        password,
-      }),
+    const params = {
+      email,
+      password,
+    };
+
+    const response = await axios.get(config.OAUTH_CLIENT_DATA, {
+      params,
     });
 
     return response.data;
@@ -71,7 +71,7 @@ exports.getOAuthLoginURL = clientId => {
  * @param {string} redirectUri URI to be redirected to after successful login
  * @return {Promise} OAUth data
  */
-exports.updateOAuthRedirectUri = async(clientId, clientSecret, redirectUri) => {
+exports.updateOAuthRedirectUri = async (clientId, clientSecret, redirectUri) => {
   try {
     const response = await axios({
       method: 'PUT',
