@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/api" /> </url>
+<url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/comment</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/comment" /> </url>
 <url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/installation</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/installation" /> </url>
+<url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/oauth</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/oauth" /> </url>
 <url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/overview" /> </url>
+<url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/project</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/project" /> </url>
 <url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/roadmap</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/roadmap" /> </url>
+<url> <loc>https://kkoscielniak.github.io/node-nozbe/docs/task</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kkoscielniak.github.io/node-nozbe/docs/task" /> </url>
 </urlset>
