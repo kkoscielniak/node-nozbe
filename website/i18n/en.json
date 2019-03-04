@@ -5,31 +5,42 @@
     "previous": "Previous",
     "tagline": "NodeJS implementation of Nozbe API",
     "docs": {
-      "api": {
-        "title": "API reference",
-        "sidebar_label": "API"
+      "comment": {
+        "title": "Comments",
+        "sidebar_label": "Comments"
       },
       "installation": {
         "title": "Installation and usage",
         "sidebar_label": "Installation"
       },
+      "oauth": {
+        "title": "Authorization",
+        "sidebar_label": "Authorization"
+      },
       "overview": {
         "title": "node-nozbe",
         "sidebar_label": "Overview"
       },
+      "project": {
+        "title": "Projects",
+        "sidebar_label": "Projects"
+      },
       "roadmap": {
         "title": "Roadmap",
         "sidebar_label": "Roadmap"
+      },
+      "task": {
+        "title": "Tasks",
+        "sidebar_label": "Tasks"
       }
     },
     "links": {
-      "Docs": "Docs",
-      "API": "API",
       "Fork me": "Fork me"
     },
     "categories": {
       "Getting started": "Getting started",
-      "API": "API"
+      "API": "API",
+      "Others": "Others"
     }
   },
   "pages-strings": {

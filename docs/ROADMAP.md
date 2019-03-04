@@ -3,6 +3,7 @@ id: roadmap
 title: Roadmap
 sidebar_label: Roadmap
 ---
+
 This document describes what Nozbe functionalities Nozbe are covered by the `node-nozbe` package and what features still wait for being developed.
 
 At this moment the package is developed concurrently with another Nozbe-related project. Particular functionalities will be added when necessary.

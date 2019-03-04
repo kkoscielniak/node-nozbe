@@ -7,9 +7,7 @@ const siteConfig = {
   projectName: 'node-nozbe',
   organizationName: 'kkoscielniak',
   headerLinks: [
-    { doc: 'overview', label: 'Docs' },
-    { doc: 'api', label: 'API' },
-    { href: 'https://github.com/kkoscielniak', label: 'Fork me' }
+    { href: 'https://github.com/kkoscielniak', label: 'Fork me' },
   ],
 
   colors: {
