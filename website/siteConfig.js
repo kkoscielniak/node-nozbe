@@ -1,11 +1,7 @@
-const users = [
-  // TODO: Add users
-];
-
 const siteConfig = {
   title: 'node-nozbe',
   tagline: 'NodeJS implementation of Nozbe API',
-  url: 'https://kkoscielniak.github.io',
+  url: 'https://kkoscielniak.github.io/',
   baseUrl: '/node-nozbe/',
 
   projectName: 'node-nozbe',
@@ -13,9 +9,8 @@ const siteConfig = {
   headerLinks: [
     { doc: 'overview', label: 'Docs' },
     { doc: 'api', label: 'API' },
+    { href: 'https://github.com/kkoscielniak', label: 'Fork me' }
   ],
-
-  // users,
 
   colors: {
     primaryColor: '#2E8555',

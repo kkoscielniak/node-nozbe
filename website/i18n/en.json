@@ -7,7 +7,7 @@
     "docs": {
       "api": {
         "title": "API reference",
-        "sidebar_label": "API reference"
+        "sidebar_label": "API"
       },
       "installation": {
         "title": "Installation and usage",
@@ -24,7 +24,8 @@
     },
     "links": {
       "Docs": "Docs",
-      "API": "API"
+      "API": "API",
+      "Fork me": "Fork me"
     },
     "categories": {
       "Getting started": "Getting started",
