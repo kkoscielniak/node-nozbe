@@ -12,7 +12,7 @@
     "api"
   ],
   "scripts": {
-    "docs": "npx jsdoc-to-markdown -f src/oauth.js src/task.js src/comment.js src/project.js --template docs/API.hbs > docs/API.md",
+    "docs": "node scripts/docs.js",
     "build": "NODE_PATH=src rollup -c",
     "precommit": "npm run test",
     "prebuild": "rimraf ./lib",

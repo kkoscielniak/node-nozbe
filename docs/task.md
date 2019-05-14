@@ -9,6 +9,9 @@ sidebar_label: Tasks
 <dt><a href="#getListOfTasks">getListOfTasks(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Retrieves a full list of tasks</p>
 </dd>
+<dt><a href="#getPriorities">getPriorities(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Retrieves tasks flagged as next actions</p>
+</dd>
 <dt><a href="#addTask">addTask(clientId, accessToken, task)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds new task to the project</p>
 </dd>
@@ -18,6 +21,19 @@ sidebar_label: Tasks
 
 ## getListOfTasks(clientId, accessToken) ⇒ <code>Promise</code>
 Retrieves a full list of tasks
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - Tasks data  
+
+| Param | Type |
+| --- | --- |
+| clientId | <code>string</code> | 
+| accessToken | <code>string</code> | 
+
+<a name="getPriorities"></a>
+
+## getPriorities(clientId, accessToken) ⇒ <code>Promise</code>
+Retrieves tasks flagged as next actions
 
 **Kind**: global function  
 **Returns**: <code>Promise</code> - Tasks data  
