@@ -30,6 +30,9 @@
 <dt><a href="#getListOfTasks">getListOfTasks(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Retrieves a full list of tasks</p>
 </dd>
+<dt><a href="#getPriorities">getPriorities(clientId, accessToken)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Retrieves tasks flagged as next actions</p>
+</dd>
 <dt><a href="#addTask">addTask(clientId, accessToken, task)</a> ⇒ <code>Promise</code></dt>
 <dd><p>Adds new task to the project</p>
 </dd>
@@ -37,6 +40,20 @@
 <p><a name="getListOfTasks"></a></p>
 <h2><a class="anchor" aria-hidden="true" id="getlistoftasksclientid-accesstoken-code-promise-code"></a><a href="#getlistoftasksclientid-accesstoken-code-promise-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getListOfTasks(clientId, accessToken) ⇒ <code>Promise</code></h2>
 <p>Retrieves a full list of tasks</p>
+<p><strong>Kind</strong>: global function<br>
+<strong>Returns</strong>: <code>Promise</code> - Tasks data</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th></tr>
+</thead>
+<tbody>
+<tr><td>clientId</td><td><code>string</code></td></tr>
+<tr><td>accessToken</td><td><code>string</code></td></tr>
+</tbody>
+</table>
+<p><a name="getPriorities"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="getprioritiesclientid-accesstoken-code-promise-code"></a><a href="#getprioritiesclientid-accesstoken-code-promise-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getPriorities(clientId, accessToken) ⇒ <code>Promise</code></h2>
+<p>Retrieves tasks flagged as next actions</p>
 <p><strong>Kind</strong>: global function<br>
 <strong>Returns</strong>: <code>Promise</code> - Tasks data</p>
 <table>
@@ -72,4 +89,4 @@
 <tr><td>task.recur</td><td><code>number</code></td><td>Recurrency of the task where<br> <code>0</code>: do not repeat (default)<br> <code>1</code>: every day<br> <code>2</code>: every week day<br> <code>3</code>: every week<br> <code>4</code>: every 2 weeks<br> <code>5</code>: every month<br> <code>6</code>: every half of a year<br> <code>7</code>: every year<br> <code>8</code>: every 3 weeks<br> <code>9</code>: every 2 months<br> <code>10</code>: every 3 months<br> <code>11</code>: every 2 years<br> <code>12</code>: every 2 days<br> <code>13</code>: every 4 weeks<br></td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/node-nozbe/docs/oauth"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/node-nozbe/docs/comment"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#functions">Functions</a></li><li><a href="#getlistoftasksclientid-accesstoken-code-promise-code">getListOfTasks(clientId, accessToken) ⇒ Promise</a></li><li><a href="#addtaskclientid-accesstoken-task-code-promise-code">addTask(clientId, accessToken, task) ⇒ Promise</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Created by <a href="https://github.com/kkoscielniak">@kkoscielniak</a></section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/node-nozbe/docs/oauth"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/node-nozbe/docs/comment"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#functions">Functions</a></li><li><a href="#getlistoftasksclientid-accesstoken-code-promise-code">getListOfTasks(clientId, accessToken) ⇒ Promise</a></li><li><a href="#getprioritiesclientid-accesstoken-code-promise-code">getPriorities(clientId, accessToken) ⇒ Promise</a></li><li><a href="#addtaskclientid-accesstoken-task-code-promise-code">addTask(clientId, accessToken, task) ⇒ Promise</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Created by <a href="https://github.com/kkoscielniak">@kkoscielniak</a></section></footer></div></body></html>
