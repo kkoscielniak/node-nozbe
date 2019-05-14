@@ -9,6 +9,7 @@ exports.getOAuthLoginURL = module.exports.getOAuthLoginURL = oauth.getOAuthLogin
 exports.updateOAuthRedirectUri = module.exports.updateOAuthRedirectUri = oauth.updateOAuthRedirectUri;
 
 exports.getListOfTasks = module.exports.getListOfTasks = task.getListOfTasks;
+exports.getPriorities = module.exports.getPriorities = task.getPriorities;
 exports.addTask = module.exports.addTask = task.addTask;
 
 exports.addComment = module.exports.addComment = comment.addComment;

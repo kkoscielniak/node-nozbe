@@ -30,6 +30,21 @@ exports.getListOfTasks = async(clientId, accessToken) => {
 };
 
 /**
+ * Retrieves tasks flagged as next actions
+ * @param {string} clientId
+ * @param {string} accessToken
+ * @return {Promise} Tasks data
+ */
+exports.getPriorities = async (clientId, accessToken) => {
+  try {
+    const tasks = await this.getListOfTasks(clientId, accessToken);
+    return tasks.filter(task => task.next === true);
+  } catch (err) {
+    return err;
+  }
+};
+
+/**
  * Adds new task to the project
  * @param {string} clientId Application ID
  * @param {string} accessToken Users access token
