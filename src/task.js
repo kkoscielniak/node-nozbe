@@ -9,7 +9,7 @@ const config = require('./config');
  * @param {string} accessToken
  * @return {Promise} Tasks data
  */
-exports.getListOfTasks = async(clientId, accessToken) => {
+const getListOfTasks = async (clientId, accessToken) => {
   try {
     const params = {
       client_id: clientId,
@@ -28,6 +28,7 @@ exports.getListOfTasks = async(clientId, accessToken) => {
     return err.response.data;
   }
 };
+exports.getListOfTasks = getListOfTasks;
 
 /**
  * Retrieves tasks flagged as next actions
@@ -37,7 +38,7 @@ exports.getListOfTasks = async(clientId, accessToken) => {
  */
 exports.getPriorities = async (clientId, accessToken) => {
   try {
-    const tasks = await this.getListOfTasks(clientId, accessToken);
+    const tasks = await getListOfTasks(clientId, accessToken);
     return tasks.filter(task => task.next === true);
   } catch (err) {
     return err;
@@ -114,4 +115,3 @@ exports.addTask = async(clientId, accessToken, task) => {
     return err.response.data;
   }
 };
-
