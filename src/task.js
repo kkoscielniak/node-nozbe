@@ -39,7 +39,7 @@ exports.getListOfTasks = getListOfTasks;
 exports.getPriorities = async (clientId, accessToken) => {
   try {
     const tasks = await getListOfTasks(clientId, accessToken);
-    return tasks.filter(task => task.next === true);
+    return tasks.filter(task => (task.next && !task.completed));
   } catch (err) {
     return err;
   }
